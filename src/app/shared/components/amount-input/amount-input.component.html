@@ -1,1 +1,19 @@
-<p>amount-input works!</p>
+<div class="input">
+    <button
+        class="input__controller"
+        (click)="handleClick('sub')"
+    >
+        -
+    </button>
+    
+    <span class="input__value">
+        {{ amount }}
+    </span>
+
+    <button
+        class="input__controller"
+        (click)="handleClick('sum')"
+    >
+        +
+    </button>
+</div>
