@@ -1,1 +1,31 @@
-<p>header works!</p>
+<header class="header">
+    <nav class="header__navigation">
+        <a
+            id="logo"
+            routerLink="/"
+        >
+            <img src="../../../../assets/svgs/logo.svg" />
+        </a>
+
+        <ul class="header__links">
+            <li
+                class="header__link"
+                *ngFor="let link of navLinks"
+            >
+                <a [routerLink]="link.path">{{ link.label }}</a>
+            </li>
+        </ul>
+    </nav>
+
+    <ul class="header__account">
+        <li>
+            <div class="account__cart">Cart icon <span>3</span></div>
+            <div>
+                <li>Cart component</li>
+            </div>
+        </li>
+        <li>
+            <div class="account__photo"></div>
+        </li>
+    </ul>
+</header>

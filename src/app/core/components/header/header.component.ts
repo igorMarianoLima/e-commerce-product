@@ -6,5 +6,26 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
-
+  navLinks = [
+    {
+      path: '/collections',
+      label: 'Collections'
+    },
+    {
+      path: '/men',
+      label: 'Men'
+    },
+    {
+      path: '/women',
+      label: 'Women'
+    },
+    {
+      path: '/about',
+      label: 'About'
+    },
+    {
+      path: '/contact',
+      label: 'Contact'
+    }
+  ]
 }
