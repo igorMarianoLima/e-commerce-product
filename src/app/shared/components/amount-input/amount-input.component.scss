@@ -1,0 +1,34 @@
+.input {
+    width: fit-content;
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    background-color: var(--light-grayish-blue);
+    border-radius: 8px;
+}
+
+.input__controller, .input__value {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 8px 12px;
+
+    font-weight: 700;
+    height: inherit;
+}
+
+.input__controller {
+    font-size: 24px;
+    color: var(--orange);
+
+    background-color: transparent;
+}
+
+.input__value {
+    width: 24px;
+
+    font-size: 14px;
+}
