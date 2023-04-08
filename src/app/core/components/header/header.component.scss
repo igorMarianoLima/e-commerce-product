@@ -1,0 +1,115 @@
+.header {
+    height: 90px;
+
+    background-color: var(--white);
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    border-bottom: 1px solid var(--light-grayish-blue);
+}
+
+.header__navigation, .header__links, .header__link, .header__account {
+    height: 100%;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.header__navigation {
+    gap: 48px;
+}
+
+.header__links, .header__account {
+    gap: 24px;
+}
+
+.header__link {
+    position: relative;
+
+    a {
+        color: var(--dark-grayish-blue);
+
+        transition: color .4s;
+    }
+
+    &::after {
+        content: '';
+
+        position: absolute;
+        bottom: 0;
+        left: 0;
+
+        width: 0;
+        height: 2px;
+
+        background-color: var(--orange);
+
+        transition: width .4s;
+    }
+
+    &:hover {
+        a {
+            color: var(--very-dark-blue);
+        }
+
+        &::after {
+            width: 100%;
+        }
+    }
+}
+
+.header__account {
+    .account__photo {
+        width: 42px;
+        height: 42px;
+
+        outline: 2px solid transparent;
+        border-radius: 50%;
+
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-image: url('../../../../assets/images/image-avatar.png');
+
+        transition: outline .4s;
+
+        &:hover {
+            cursor: pointer;
+            outline-color: var(--orange);
+        }
+    }
+
+    & > li > div:first-child {
+        position: relative;
+        cursor: pointer;
+    }
+
+    & > li > div:not(:first-child) {
+        display: none;
+    }
+
+    span {
+        position: absolute;
+        right: 0;
+        top: 0;
+        transform: translateY(-50%) translateX(+50%);
+
+        width: 16px;
+        height: 16px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        background-color: var(--orange);
+
+        font-size: 10px;
+        color: var(--white);
+
+        border-radius: 50%;
+    }
+}
