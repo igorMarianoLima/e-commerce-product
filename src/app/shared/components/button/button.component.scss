@@ -1,0 +1,23 @@
+button {
+    width: 100%;
+    min-height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    border-radius: 8px;
+
+    font-weight: 700;
+    color: var(--white);
+
+    background-color: var(--orange);
+
+    transition: all .4s;
+
+    &:disabled {
+        background-color: var(--light-grayish-blue);
+        color: var(--dark-grayish-blue);
+    }
+}
