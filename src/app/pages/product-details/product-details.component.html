@@ -1,2 +1,37 @@
 <app-header />
-<p>product-details works!</p>
+<main>
+    <section class="product__images">
+        <div class="product__image">
+            <img src="abac" alt="Product" />
+        </div>
+        <div class="images__carousel">
+            <!-- Adicionar o carrossel -->
+        </div>
+    </section>
+
+    <section class="product__details">
+        <header class="product__informations">
+            <span class="sneaker">SNEAKER COMPANY</span>
+            <h1 class="product__name">Fall Limited Edition Sneakers</h1>
+        </header>
+
+        <p class="product__description">
+            These low-profile sneakers are your perfect casual wear companion. Featuring a
+            durable rubber outer sole, they'll withstand everything the weather can offer.
+        </p>
+
+        <div class="product__price">
+            <span class="product__price__value">
+                $125.00
+                <span class="product__price__discount">50%</span>
+            </span>
+
+            <del class="product__price__value--old">$250.00</del>
+        </div>
+
+        <div class="product__options">
+            <app-amount-input [min]="0" />
+            <app-button>Add to cart</app-button>
+        </div>
+    </section>
+</main>

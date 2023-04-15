@@ -5,6 +5,9 @@ import { CoreModule } from 'src/app/core/core.module';
 import { ProductDetailsRoutingModule } from './product-details-routing.module';
 import { ProductDetailsComponent } from './product-details.component';
 
+import { AmountInputModule } from 'src/app/shared/components/amount-input/amount-input.module';
+import { ButtonModule } from 'src/app/shared/components/button/button.module';
+
 
 @NgModule({
   declarations: [
@@ -13,7 +16,9 @@ import { ProductDetailsComponent } from './product-details.component';
   imports: [
     CommonModule,
     ProductDetailsRoutingModule,
-    CoreModule
+    CoreModule,
+    AmountInputModule,
+    ButtonModule
   ]
 })
 export class ProductDetailsModule { }
