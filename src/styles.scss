@@ -24,6 +24,8 @@
     outline: 0;
 
     font-family: 'Kumbh Sans', sans-serif;
+
+    color: var(--very-dark-blue);
 }
 
 body {
@@ -32,4 +34,8 @@ body {
 
 button {
     cursor: pointer;
+}
+
+p {
+    font-size: 16px;
 }
