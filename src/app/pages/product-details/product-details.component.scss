@@ -1,0 +1,78 @@
+main {
+    padding: 80px 40px;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 96px;
+
+    & > * {
+        flex: 1;
+    }
+}
+
+.sneaker {
+    color: var(--orange);
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 1.2px;
+
+    text-transform: uppercase;
+}
+
+.product__details {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.product__informations, .product__price {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.product__name {
+    font-size: 36px;
+}
+
+.product__description {
+    line-height: 24px;
+    color: var(--dark-grayish-blue);
+}
+
+.product__price__value {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.product__price__discount {
+    padding: 4px 6px;
+
+    color: var(--orange);
+    font-size: 12px;
+    font-weight: 700;
+
+    background-color: var(--pale-orange);
+    border-radius: 4px;
+}
+
+.product__price__value--old {
+    color: var(--grayish-blue);
+    font-weight: 700;
+
+    text-decoration: line-through;
+}
+
+.product__options {
+    display: flex;
+    gap: 16px;
+
+    app-button {
+        width: 100%;
+    }
+}
