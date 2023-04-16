@@ -5,6 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { StoreModule } from '@ngrx/store';
 
+import { storesRedux } from './core/stores/index.stores';
+
 @NgModule({
   declarations: [
     AppComponent
@@ -12,7 +14,7 @@ import { StoreModule } from '@ngrx/store';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    StoreModule.forRoot({}, {})
+    StoreModule.forRoot({ ...storesRedux }, {})
   ],
   providers: [],
   bootstrap: [AppComponent]
