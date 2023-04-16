@@ -4,6 +4,8 @@ import { RouterModule } from '@angular/router';
 
 import { HeaderComponent } from './header.component';
 
+import { CartModule } from 'src/app/shared/components/cart/cart.module';
+
 
 
 @NgModule({
@@ -12,7 +14,8 @@ import { HeaderComponent } from './header.component';
   ],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    CartModule
   ],
   exports: [
     HeaderComponent

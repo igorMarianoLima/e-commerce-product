@@ -83,13 +83,25 @@
         }
     }
 
-    & > li > div:first-child {
+    & > li {
         position: relative;
+    }
+
+    & > li > div:first-child {
         cursor: pointer;
     }
 
     & > li > div:not(:first-child) {
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+
         display: none;
+    }
+
+    & > li > div:first-child:hover + div {
+        display: block;
     }
 
     span {
