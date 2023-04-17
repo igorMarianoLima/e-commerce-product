@@ -1,1 +1,25 @@
-<p>cart-item works!</p>
+<div class="cart-item">
+    <div
+        class="cart-item__image"
+        [ngStyle]="
+            {
+                'background-image': 'url(' + product.image + ')'
+            }
+        "
+    >
+
+    </div>
+
+    <div class="cart-item__informations">
+        <p>{{ product.name }}</p>
+
+        <div class="cart-item__values">
+            <p>
+                {{ product.price | currency }} x {{ product.quantity }}
+                <b>{{ product.price * product.quantity | currency }}</b>
+            </p>
+        </div>
+    </div>
+
+    <button (click)="onRemoveFromCart(product)">Icon</button>
+</div>

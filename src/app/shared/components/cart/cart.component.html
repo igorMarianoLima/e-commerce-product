@@ -10,18 +10,19 @@
             }
         "
     >
-        <ul
-            *ngIf="(cart$ | async)?.products!.length > 0; else noProducts"
-        >
-            <li
-                *ngFor="let product of (cart$ | async)?.products"
-                class="cart-item"
-            >
-                {{ product.name }}
-            </li>
-        </ul>
+        <div *ngIf="(cart$ | async)?.products!.length > 0; then hasProducts else noProducts"></div>
+        <ng-template #hasProducts>
+            <ul>
+                <li
+                    *ngFor="let product of (cart$ | async)?.products"
+                    class="cart-item"
+                >
+                    <app-cart-item [product]="product" />
+                </li>
+            </ul>
 
-        <app-button>Checkout</app-button>
+            <app-button>Checkout</app-button>
+        </ng-template>
 
         <ng-template #noProducts>
             <h3>You cart is empty.</h3>

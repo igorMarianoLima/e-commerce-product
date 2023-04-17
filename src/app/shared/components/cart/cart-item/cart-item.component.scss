@@ -1,0 +1,24 @@
+.cart-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.cart-item__image {
+    min-width: 48px;
+    min-height: 48px;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    border-radius: 4px;
+}
+
+.cart-item__informations {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
