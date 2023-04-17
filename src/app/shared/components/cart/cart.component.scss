@@ -1,0 +1,35 @@
+article {
+    min-width: 320px;
+
+    background-color: var(--white);
+    box-shadow: 0px 8px 24px var(--grayish-blue);
+    border-radius: 8px;
+
+    header, div {
+        padding: 24px;
+    }
+
+    header {
+        border-bottom: 1px solid var(--light-grayish-blue);
+    }
+
+    div, ul {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    div {
+        min-height: 160px;
+        gap: 24px;
+    }
+
+    h2, h3 {
+        font-size: 16px;
+    }
+
+    h3 {
+        color: var(--dark-grayish-blue);
+        text-align: center;
+    }
+}
