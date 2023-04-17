@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CartComponent } from './cart.component';
 
+import { ButtonModule } from '../button/button.module';
+
 
 
 @NgModule({
@@ -9,7 +11,8 @@ import { CartComponent } from './cart.component';
     CartComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    ButtonModule
   ],
   exports: [
     CartComponent

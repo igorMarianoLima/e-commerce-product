@@ -1,1 +1,30 @@
-<p>cart works!</p>
+<article>
+    <header>
+        <h2>Cart</h2>
+    </header>
+
+    <div
+        [ngStyle]="
+            {
+                'justify-content': (cart$ | async)?.products!.length === 0 ? 'center' : 'space-between'
+            }
+        "
+    >
+        <ul
+            *ngIf="(cart$ | async)?.products!.length > 0; else noProducts"
+        >
+            <li
+                *ngFor="let product of (cart$ | async)?.products"
+                class="cart-item"
+            >
+                {{ product.name }}
+            </li>
+        </ul>
+
+        <app-button>Checkout</app-button>
+
+        <ng-template #noProducts>
+            <h3>You cart is empty.</h3>
+        </ng-template>
+    </div>
+</article>
