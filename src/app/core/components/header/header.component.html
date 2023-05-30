@@ -1,31 +1,28 @@
 <header class="header">
-    <nav class="header__navigation">
-        <a
-            id="logo"
-            routerLink="/"
-        >
-            <img src="../../../../assets/svgs/logo.svg" />
-        </a>
+  <nav class="header__navigation">
+    <a id="logo" routerLink="/">
+      <img src="../../../../assets/svgs/logo.svg" />
+    </a>
 
-        <ul class="header__links">
-            <li
-                class="header__link"
-                *ngFor="let link of navLinks"
-            >
-                <a [routerLink]="link.path">{{ link.label }}</a>
-            </li>
-        </ul>
-    </nav>
-
-    <ul class="header__account">
-        <li>
-            <div class="account__cart">Cart icon <span>3</span></div>
-            <div>
-                <app-cart />
-            </div>
-        </li>
-        <li>
-            <div class="account__photo"></div>
-        </li>
+    <ul class="header__links">
+      <li class="header__link" *ngFor="let link of navLinks">
+        <a [routerLink]="link.path">{{ link.label }}</a>
+      </li>
     </ul>
+  </nav>
+
+  <ul class="header__account">
+    <li>
+      <div class="account__cart">
+        <button (click)="toggleCart()">Cart icon</button>
+        <span>3</span>
+      </div>
+      <div>
+        <app-cart [(isOpen)]="isCartOpen" />
+      </div>
+    </li>
+    <li>
+      <div class="account__photo"></div>
+    </li>
+  </ul>
 </header>

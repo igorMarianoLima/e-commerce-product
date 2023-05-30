@@ -6,6 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
+  isCartOpen: boolean = false;
+
   navLinks = [
     {
       path: '/collections',
@@ -28,4 +30,8 @@ export class HeaderComponent {
       label: 'Contact'
     }
   ]
+
+  toggleCart() {
+    this.isCartOpen = !this.isCartOpen;
+  }
 }
