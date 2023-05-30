@@ -1,31 +1,33 @@
-<article>
-    <header>
-        <h2>Cart</h2>
-    </header>
+<article *ngIf="isOpen">
+  <header>
+    <h2>Cart</h2>
+  </header>
 
+  <div
+    [ngStyle]="{
+      'justify-content':
+        ((cart$ | async)?.products)!.length === 0 ? 'center' : 'space-between'
+    }"
+  >
     <div
-        [ngStyle]="
-            {
-                'justify-content': (cart$ | async)?.products!.length === 0 ? 'center' : 'space-between'
-            }
-        "
-    >
-        <div *ngIf="(cart$ | async)?.products!.length > 0; then hasProducts else noProducts"></div>
-        <ng-template #hasProducts>
-            <ul>
-                <li
-                    *ngFor="let product of (cart$ | async)?.products"
-                    class="cart-item"
-                >
-                    <app-cart-item [product]="product" />
-                </li>
-            </ul>
+      *ngIf="
+        ((cart$ | async)?.products)!.length > 0;
+        then hasProducts;
+        else noProducts
+      "
+    ></div>
+    <ng-template #hasProducts>
+      <ul>
+        <li *ngFor="let product of (cart$ | async)?.products" class="cart-item">
+          <app-cart-item [product]="product" />
+        </li>
+      </ul>
 
-            <app-button>Checkout</app-button>
-        </ng-template>
+      <app-button (onClick)="toggleCart()">Checkout</app-button>
+    </ng-template>
 
-        <ng-template #noProducts>
-            <h3>You cart is empty.</h3>
-        </ng-template>
-    </div>
+    <ng-template #noProducts>
+      <h3>You cart is empty.</h3>
+    </ng-template>
+  </div>
 </article>
